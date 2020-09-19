@@ -1,0 +1,595 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Permanent Marker", cursive;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+li {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header {
+  height: 100vh;
+}
+
+a.active {
+  background: #e86929;
+}
+
+.hero {
+  background: url(./images/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.hero .header-img {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.hero .header-img img {
+  width: 100%;
+  -webkit-box-shadow: 0 0 45px black;
+          box-shadow: 0 0 45px black;
+}
+
+.hero .header-text {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  color: white;
+  background: rgba(255, 157, 91, 0.76);
+  border-radius: 50%;
+  text-align: Center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hero .header-text h2 {
+  font-weight: 800;
+  font-size: 3rem;
+  width: 100%;
+  text-align: Center;
+}
+
+.hero .buy-botton {
+  position: absolute;
+  bottom: 2rem;
+  cursor: pointer;
+  background: #e86929;
+  font-size: 1.4rem;
+  padding: 1rem 4rem;
+}
+
+.hero .buy-botton:hover {
+  background: #ff5c23;
+}
+
+.hero .buy-botton a {
+  color: white;
+  font-weight: 800;
+  pointer-events: none;
+  position: relative;
+}
+
+.fa-search {
+  color: black;
+}
+
+.nav-bar {
+  width: 100%;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+nav {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: flex;
+          flex-direction: flex;
+  color: white;
+}
+
+nav ul {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav ul a {
+  padding: 2vh;
+}
+
+nav ul a:hover {
+  background: #e86929;
+}
+
+nav a {
+  color: white;
+  font-size: 1.3rem;
+}
+
+#logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 2rem;
+  line-height: 1.3rem;
+  text-align: center;
+}
+
+#logo span {
+  font-size: 1.5rem;
+  color: #ff5c23;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 10%;
+  position: relative;
+}
+
+.search .search-box {
+  background: white;
+  width: 7rem;
+  padding: 0.7rem;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
+}
+
+.search .search-dropdown {
+  background: black;
+  position: absolute;
+  height: 70px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  opacity: 0;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  bottom: -80px;
+}
+
+.search .search-dropdown input {
+  font-size: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search-dropdown.active {
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+footer {
+  background: #444444;
+}
+
+footer .footer {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 3rem;
+}
+
+footer .contact {
+  width: 50%;
+  border: 1px solid orange;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+footer .contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .contact form input {
+  margin: 1rem 0rem;
+  border: none;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  background: orange;
+  border-radius: 25px;
+  outline: none;
+}
+
+footer .contact form textarea {
+  background: orange;
+  border-radius: 25px;
+  outline: none;
+  padding: 2rem;
+  resize: none;
+  width: 80%;
+}
+
+footer .contact form input[type="submit"] {
+  padding: 1rem 3rem;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.footer-links {
+  width: 50%;
+  height: 100%;
+}
+
+.footer-links ul {
+  height: 100%;
+}
+
+.footer-links ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-links ul li a {
+  color: white;
+}
+
+#about {
+  padding: 5rem;
+  background: #dbdbdb;
+}
+
+.steam {
+  background: orange;
+  -webkit-box-shadow: 0 0 15px black;
+          box-shadow: 0 0 15px black;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.steam .steam-img {
+  width: 50%;
+}
+
+.steam .steam-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 1rem;
+}
+
+.steam .steam-text {
+  width: 45%;
+  padding: 0rem 3rem;
+}
+
+.steam .steam-text h1 {
+  font-weight: 900;
+  text-align: center;
+  font-size: 3rem;
+  position: relative;
+}
+
+.steam .steam-text h1::before {
+  content: "";
+  height: 4px;
+  width: 50%;
+  position: Absolute;
+  bottom: 0;
+  background: red;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.steam .steam-text p {
+  font-size: 1.3rem;
+  color: #333333;
+}
+
+#gameplay {
+  position: relative;
+  background: url("./images/gameplayBg.jpg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem;
+}
+
+#gameplay .gameplay-video {
+  z-index: 2;
+  height: 700px;
+  width: 80%;
+}
+
+#gameplay h1 {
+  z-index: 2;
+  color: #e86929;
+  font-size: 3rem;
+  margin: 2rem;
+  position: relative;
+}
+
+#gameplay h1::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
+  background: #e86929;
+}
+
+.gameplay-bg {
+  background-color: rgba(77, 77, 77, 0.8);
+  position: Absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+
+#captures {
+  background: #dbdbdb;
+  min-height: 100vh;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+#captures h1 {
+  color: #e86929;
+  font-size: 3rem;
+  margin: 2rem;
+  position: relative;
+}
+
+#captures h1::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
+  background: #e86929;
+}
+
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  width: 80%;
+  margin: 0 auto;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 1rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  margin: 1rem auto;
+  width: 400px;
+  height: 400px;
+}
+
+.card .cardHover {
+  position: absolute;
+  background: #a8a8a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.card .cardHover:hover {
+  opacity: 0.7;
+}
+
+.card .cardHover i {
+  font-size: 5rem;
+  text-align: center;
+  color: white;
+  height: 80px;
+  width: 80px;
+}
+
+.cardImg {
+  width: 400px;
+  height: 400px;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=style.css.map */

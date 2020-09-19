@@ -1,0 +1,57 @@
+footer {
+  background: rgb(68, 68, 68);
+  .footer {
+    width: 80%;
+    margin: 0 auto;
+    @include flex(space-around, center, row);
+
+    padding: 3rem;
+  }
+  .contact {
+    width: 50%;
+    border: 1px solid orange;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    form {
+      @include flex(center, center, column);
+
+      input {
+        margin: 1rem 0rem;
+        border: none;
+        font-size: 1.4rem;
+        padding: 0.5rem 1rem;
+        background: orange;
+        border-radius: 25px;
+        outline: none;
+      }
+      textarea {
+        background: orange;
+        border-radius: 25px;
+        outline: none;
+        padding: 2rem;
+        resize: none;
+        width: 80%;
+      }
+      input[type="submit"] {
+        padding: 1rem 3rem;
+        border-radius: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.footer-links {
+  width: 50%;
+  height: 100%;
+  ul {
+    height: 100%;
+  }
+  ul li {
+    @include flex(space-evenly, center, column);
+
+    a {
+      color: white;
+    }
+  }
+}

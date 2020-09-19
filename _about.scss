@@ -1,0 +1,42 @@
+#about {
+  padding: 5rem;
+  background: $bgWhite;
+}
+.steam {
+  background: orange;
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+  padding: 2rem;
+  @include flex(space-between, center, row);
+  .steam-img {
+    width: 50%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      margin-right: 1rem;
+    }
+  }
+  .steam-text {
+    width: 45%;
+    padding: 0rem 3rem;
+    h1 {
+      font-weight: 900;
+      text-align: center;
+      font-size: 3rem;
+      position: relative;
+      &::before {
+        content: "";
+        height: 4px;
+        width: 50%;
+        position: Absolute;
+        bottom: 0;
+        background: red;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    p {
+      font-size: 1.3rem;
+      color: rgb(51, 51, 51);
+    }
+  }
+}

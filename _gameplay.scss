@@ -1,0 +1,39 @@
+#gameplay {
+  position: relative;
+  background: url("./images/gameplayBg.jpg");
+  @include flex(center, center, column);
+  padding: 3rem;
+  .gameplay-video {
+    z-index: 2;
+    height: 700px;
+    width: 80%;
+  }
+  h1 {
+    z-index: 2;
+    color: $primary;
+    font-size: 3rem;
+    margin: 2rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50%;
+      background: $primary;
+    }
+  }
+}
+.gameplay-bg {
+  background-color: rgba(77, 77, 77, 0.8);
+  position: Absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background-repeat: no-repeat;
+}

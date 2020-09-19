@@ -1,0 +1,135 @@
+.header {
+  height: 100vh;
+}
+a.active {
+  background: $primary;
+}
+.hero {
+  background: url(./images/header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  @include flex(space-around, center, row);
+  position: relative;
+  .header-img {
+    width: 40%;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      box-shadow: 0 0 45px black;
+    }
+  }
+  .header-text {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    color: white;
+    background: rgba(255, 157, 91, 0.76);
+    border-radius: 50%;
+    text-align: Center;
+    @include flex(center, center, column);
+    h2 {
+      font-weight: 800;
+      font-size: 3rem;
+      width: 100%;
+      text-align: Center;
+    }
+  }
+  .buy-botton {
+    position: absolute;
+    bottom: 2rem;
+    cursor: pointer;
+    background: $primary;
+    font-size: 1.4rem;
+    padding: 1rem 4rem;
+    &:hover {
+      background: $second;
+    }
+    a {
+      color: white;
+      font-weight: 800;
+      pointer-events: none;
+      position: relative;
+    }
+  }
+}
+.fa-search {
+  color: black;
+}
+.nav-bar {
+  width: 100%;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+nav {
+  width: 90%;
+  margin: 0 auto;
+
+  @include flex(space-between, center, flex);
+  color: white;
+  ul {
+    flex: 2;
+    @include flex(space-around, center, row);
+    a {
+      padding: 2vh;
+      &:hover {
+        background: $primary;
+      }
+    }
+  }
+  a {
+    color: white;
+    font-size: 1.3rem;
+  }
+}
+#logo {
+  flex: 1;
+  font-size: 2rem;
+  line-height: 1.3rem;
+  text-align: center;
+  span {
+    font-size: 1.5rem;
+    color: $second;
+  }
+}
+.search {
+  @include flex(flex-end, center, row);
+  flex: 1;
+  width: 10%;
+  position: relative;
+
+  .search-box {
+    background: white;
+    width: 7rem;
+    padding: 0.7rem;
+    color: black;
+    @include flex(center, center, row);
+    cursor: pointer;
+  }
+  .search-dropdown {
+    background: black;
+    position: absolute;
+    height: 70px;
+    transition: 0.5s;
+    transform: translateY(-50px);
+    opacity: 0;
+    pointer-events: none;
+    @include flex(center, center, row);
+    overflow: hidden;
+    bottom: -80px;
+    input {
+      font-size: 1.5rem;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+}
+.search-dropdown.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}

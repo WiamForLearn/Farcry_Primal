@@ -1,0 +1,32 @@
+// GLOBAL COLOR
+$primary: #e86929;
+$second: #ff5c23;
+$third: #ff5c23;
+$bgWhite: rgb(219, 219, 219);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+@mixin flex($justify, $align, $flex) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flex;
+}
+body {
+  font-family: "Permanent Marker", cursive;
+}
+ul,
+li {
+  list-style-type: none;
+}
+li {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
